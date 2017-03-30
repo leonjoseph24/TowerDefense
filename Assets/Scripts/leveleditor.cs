@@ -36,42 +36,60 @@ public class leveleditor : MonoBehaviour {
 
                             Instantiate(levelobjects[3], new Vector3(x, y, 0), Quaternion.identity);
                             break;
-                        case '4': // towers
+                        case '4': // creeps
 
                             Instantiate(levelobjects[4], new Vector3(x, y, 0), Quaternion.identity);
                             break;
-                        case '5': // creeps
+                        case '5': // waypoint1 
 
                             Instantiate(levelobjects[5], new Vector3(x, y, -0.1f), Quaternion.identity);
                             break;
-                        case '6': // waypoint1
+                        case '6': // waypoint2
 
                             Instantiate(levelobjects[6], new Vector3(x, y, -0f), Quaternion.identity);
                             break;
-                        case '7': //waypoint 2
+                        case '7': //waypoint 3
 
                             Instantiate(levelobjects[7], new Vector3(x, y, -0f), Quaternion.identity);
                             break;
-                        case '8': //waypoint 3
+                        case '8': //waypoint 4
 
                             Instantiate(levelobjects[8], new Vector3(x, y, -0f), Quaternion.identity);
                             break;
-                        case '9': //waypoint 4
+                        case '9': //waypoint 5
 
                             Instantiate(levelobjects[9], new Vector3(x, y, -0f), Quaternion.identity);
                             break;
-                        case 'A': //waypoint 5
+                        case 'A': //waypoint 6
 
                             Instantiate(levelobjects[10], new Vector3(x, y, -0f), Quaternion.identity);
                             break;
-                        case 'B': //waypoint 6
+                        case 'B': //waypoint 7
 
                             Instantiate(levelobjects[11], new Vector3(x, y, -0f), Quaternion.identity);
                             break;
-                        case 'C': //waypoint 7
+                        case 'C': //Tower 2A
 
                             Instantiate(levelobjects[12], new Vector3(x, y, -0f), Quaternion.identity);
                             break;
+
+                        case 'D': //Tower 2B
+
+                            Instantiate(levelobjects[13], new Vector3(x, y, -0f), Quaternion.identity);
+                            break;
+                        case 'E': //Tower 2C
+
+                            Instantiate(levelobjects[14], new Vector3(x, y, -0f), Quaternion.identity);
+                            break;
+                        case 'F': //Tower 2D
+
+                            Instantiate(levelobjects[15], new Vector3(x, y, -0f), Quaternion.identity);
+                            break;
+                        case 'G': //Tower 2E
+
+                            Instantiate(levelobjects[16], new Vector3(x, y, -0f), Quaternion.identity);
+                            break;
+                        
 
 
 

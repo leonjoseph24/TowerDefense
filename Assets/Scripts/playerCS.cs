@@ -33,21 +33,7 @@ public class playerCS : MonoBehaviour {
             transform.Translate(0, -0.1f, 0);
         }
 
-        Vector3 dir = Vector3.forward;
-
-        Ray ray = new Ray(transform.position, dir);
-
-        RaycastHit hitInfo;
-
-        if (Physics.Raycast(ray, out hitInfo, 100))
-        {
-            if (hitInfo.transform.GetComponent<TowerCs>() && Input.GetKeyDown(KeyCode.Space))
-            {
-                Instantiate(tower,transform.position, Quaternion.identity);
-                Debug.Log("Tower Made");
-            }
-
-        }
+       
 
     }
 }

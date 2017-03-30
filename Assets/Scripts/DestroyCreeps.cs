@@ -38,7 +38,7 @@ public class DestroyCreeps : MonoBehaviour {
             Destroy(this.gameObject);
             SceneManager.LoadScene("Game Over");
             Debug.Log("Game Over");
-
+            
 
         }
     }

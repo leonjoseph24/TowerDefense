@@ -18,7 +18,7 @@ public class waypoints : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {                         //- enemy           - waypoint                         -distance       -not at max
         if (Vector3.Distance(transform.position, Path[target].transform.position) < 0.01 && target < Path.Length - 1)  // to calculate the distance between the enemy and the waypoint.
         {
             target++;
