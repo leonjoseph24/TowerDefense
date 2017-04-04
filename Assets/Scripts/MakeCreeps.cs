@@ -18,7 +18,7 @@ public class MakeCreeps : MonoBehaviour {
         if( time <= 1)
         {
             Instantiate(creeps[0], creepPos, Quaternion.identity);
-            Debug.Log( "Creep created");
+           
             time = 500;
         }
 	}

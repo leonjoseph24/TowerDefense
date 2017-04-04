@@ -26,7 +26,7 @@ public class DestroyCreeps : MonoBehaviour {
             
             Destroy(other.gameObject);
             HP -= 100;
-            Debug.Log(HP);
+            Debug.Log("Base Health:"+HP);
 
             
 

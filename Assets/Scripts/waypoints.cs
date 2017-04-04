@@ -26,7 +26,7 @@ public class waypoints : MonoBehaviour
 
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, Path[target].transform.position, speed); // to move the enemy from its initial position to the waypoint.
+            transform.position = Vector3.MoveTowards(transform.position, Path[target].transform.position, speed*Time.deltaTime); // to move the enemy from its initial position to the waypoint.
         }
     }
 }
