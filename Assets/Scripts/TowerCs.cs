@@ -38,7 +38,7 @@ public class TowerCs : MonoBehaviour {
 
 
         
-        if (Input.GetKeyDown(KeyCode.Space) && Physics.Raycast(ray, 100) && pl.gold>=50 )
+        if (Input.GetKeyDown(KeyCode.Space) && Physics.Raycast(ray, 100) && pl.gold>=50 && canShoot ==false )
         {
             canShoot = true;
             Debug.Log("Tower Activated" +pl.gold);
@@ -65,7 +65,7 @@ public class TowerCs : MonoBehaviour {
             
             time = 40;
         }
-        if( canShoot==true && Input.GetKey(KeyCode.C))
+        if (canShoot == true && Input.GetKey(KeyCode.C) && Physics.Raycast(ray, 100))
         {
             canShoot = false;
             Debug.Log("Tower Deactivated" + pl.gold);

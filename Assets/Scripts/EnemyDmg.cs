@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EnemyDmg : MonoBehaviour {
-    public int HP;
+    public int enemyHealth;
     public goldCS pl;
     public ScoreCS sc;
     // Use this for initialization
@@ -29,10 +29,10 @@ public class EnemyDmg : MonoBehaviour {
         {
             Destroy(other.gameObject);
             
-            HP -= 1;
+            enemyHealth -= 1;
             
         }
-        if (HP <= 0)
+        if (enemyHealth <= 0)
         {
             Destroy(this.gameObject);
             

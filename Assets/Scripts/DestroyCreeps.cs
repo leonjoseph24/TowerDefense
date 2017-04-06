@@ -6,16 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class DestroyCreeps : MonoBehaviour {
 
-    
-    int HP;
-    
-	// Use this for initialization
-	void Start () {
-        HP = 1000;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+
+    public float HP;
+
+    public HPCS baseHP;
+
+
+    // Use this for initialization
+    void Start () {
+        
+    }
+     void Awake()
+    {
+        baseHP = GameObject.Find("Player").GetComponent<HPCS>();
+
+    }
+
+    // Update is called once per frame
+    void Update () {
         
     }
 
@@ -27,13 +36,14 @@ public class DestroyCreeps : MonoBehaviour {
             Destroy(other.gameObject);
             HP -= 100;
             Debug.Log("Base Health:"+HP);
+            baseHP.health -= 100;
 
             
 
 
         }
 
-        if (HP <= 0 && other.gameObject.tag == "Enemy")
+        if (HP<= 0 && other.gameObject.tag == "Enemy")
         {
             Destroy(this.gameObject);
             SceneManager.LoadScene("Game Over");
