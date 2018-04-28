@@ -7,7 +7,7 @@ public class Play : MonoBehaviour {
 
 	public void PlayGame() //to load the game from the play button
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level Select");
     }
 
 

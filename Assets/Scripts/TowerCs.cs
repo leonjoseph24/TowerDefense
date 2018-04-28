@@ -6,6 +6,10 @@ public class TowerCs : MonoBehaviour {
     public GameObject player;
     public GameObject bullet;
     public GameObject tower;
+    public Material Deactivatedtower;
+    public Material activatedtower;
+    private bool deactivatedtower;
+
     
    
     public Vector3[] target;
@@ -16,8 +20,8 @@ public class TowerCs : MonoBehaviour {
     // Use this for initialization
     void Start () {
         canShoot = false;
-       
 
+        deactivatedtower = true;
 
     }
      void Awake()
@@ -30,6 +34,11 @@ public class TowerCs : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (deactivatedtower == true)
+        {
+            Renderer rend = GetComponent<Renderer>();
+            rend.material = Deactivatedtower;
+        }
         time -= 1;
 
         Vector3 dist = player.transform.position - transform.position;
@@ -40,6 +49,10 @@ public class TowerCs : MonoBehaviour {
         
         if (Input.GetKeyDown(KeyCode.Space) && Physics.Raycast(ray, 100) && pl.gold>=50 && canShoot ==false )
         {
+            deactivatedtower= false;
+            Renderer rend = GetComponent<Renderer>();
+            rend.material = activatedtower;
+
             canShoot = true;
             Debug.Log("Tower Activated" +pl.gold);
             pl.gold -= 50;
@@ -67,6 +80,7 @@ public class TowerCs : MonoBehaviour {
         }
         if (canShoot == true && Input.GetKey(KeyCode.C) && Physics.Raycast(ray, 100))
         {
+            deactivatedtower = true;
             canShoot = false;
             Debug.Log("Tower Deactivated" + pl.gold);
             pl.gold += 30;

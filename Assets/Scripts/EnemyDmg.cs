@@ -41,7 +41,7 @@ public class EnemyDmg : MonoBehaviour {
             sc.score += 1;
             Debug.Log("Current Score" + sc.score);
         }
-        if (sc.score >= 50)
+        if (sc.score >= 20)
         {
             SceneManager.LoadScene("Victory");
         }

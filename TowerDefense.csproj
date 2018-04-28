@@ -75,11 +75,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AudioCS.cs" />
     <Compile Include="Assets\Scripts\DestroyCreeps.cs" />
     <Compile Include="Assets\Scripts\DestroyOnWall.cs" />
     <Compile Include="Assets\Scripts\EnemyDmg.cs" />
     <Compile Include="Assets\Scripts\HPCS.cs" />
     <Compile Include="Assets\Scripts\Health_BarCS.cs" />
+    <Compile Include="Assets\Scripts\LevelPicker.cs" />
     <Compile Include="Assets\Scripts\MakeCreeps.cs" />
     <Compile Include="Assets\Scripts\Play.cs" />
     <Compile Include="Assets\Scripts\SaveAndLoad.cs" />
